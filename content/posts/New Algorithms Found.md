@@ -4,18 +4,6 @@ date: 2023-04-28T16:37:14+09:00
 # bookComments: false
 # bookSearchExclude: false
 ---
-{{< rawhtml >}}
-<script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
-</script>
-<script type="text/x-mathjax-config">
- MathJax.Hub.Config({
- tex2jax: {
- inlineMath: [['$', '$'] ],
- displayMath: [ ['$$','$$'], ["\\[","\\]"] ]
- }
- });
-</script>
-{{< /rawhtml >}}
 
 # New Algorithms Found
 新しいアルゴリズムを発見しました。
