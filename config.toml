@@ -2,10 +2,3 @@ baseURL = "https://Takaya-Shiraishi.github.io/ResearchReport/"
 languageCode = "ja-jp"
 title = "Takaya Shiraishi Research Report"
 theme = "hugo-book"
-
-[markup]
-
-[markup.goldmark]
-
-[markup.goldmark.renderer]
-hardWraps = true
