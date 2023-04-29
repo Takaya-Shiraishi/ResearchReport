@@ -2,7 +2,6 @@
 title: "New Algorithms Found"
 date: 2023-04-28T16:37:14+09:00
 image : "img/2023-04-28-17-19-29.png"
-image2 : "img/2023-04-28-17-30-16.png"
 # bookComments: false
 # bookSearchExclude: false
 ---
@@ -33,7 +32,7 @@ MTF分析は概要まんまの意味なので平均足と200MAについて見て
 つまり、直近の平均を取った足です。
 
 ### 200MA
-MAは移動平均線（Moving Avarage）の略です。
+MAは移動平均線（Moving Average）の略です。
 移動平均線とは指定された数の箱ひげ図の平均を線で表したものです。
 つまり、今回は200MAということは、200本の箱ひげ図の平均を線で表したものです。
 
