@@ -1,5 +1,5 @@
 baseURL = "https://Takaya-Shiraishi.github.io/ResearchReport/"
-languageCode = "ja-jp"
+languageCode = "ja"
 title = "Takaya Shiraishi Research Report"
 theme = "hugo-book"
 
