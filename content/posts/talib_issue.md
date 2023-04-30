@@ -14,7 +14,7 @@ pypiの環境だとta-libは所謂
 どうも`concorde`と同じでC言語版をpython向けにビルドするらしく、concordeと似たようなエラーが出る。
 
 ## ワークアラウンド
-しかしta-libにはwhlファイルをインストール対象とすることでこのエラーを回避できる。
+しかしta-libはwhlファイルをインストール対象とすることでこのエラーを回避できる。
 [https://www.lfd.uci.edu/~gohlke/pythonlibs/#ta-lib](https://www.lfd.uci.edu/~gohlke/pythonlibs/#ta-lib)から
 実行したいpythonのバージョンに合わせたwhlファイルをダウンロードして、
 ```pip install ダウンロードしたファイル名```でインストールする。
