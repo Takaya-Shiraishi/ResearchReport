@@ -1,7 +1,7 @@
 ---
 title: "Talib Issue"
 date: 2023-05-01T07:57:49+09:00
-image: "2023-05-01-08-09-25.png"
+image: "img/2023-05-01-08-09-25.png"
 # bookComments: false
 # bookSearchExclude: false
 ---
