@@ -1,7 +1,7 @@
 ---
 title: "Get Fx Data Template"
 date: 2023-05-01T09:06:04+09:00
-image: "img\2023-05-01-09-19-38.png"
+image: "img/2023-05-01-09-19-38.png"
 # bookComments: false
 # bookSearchExclude: false
 ---
