@@ -5,6 +5,8 @@ image: "img\2023-05-01-09-19-38.png"
 # bookComments: false
 # bookSearchExclude: false
 ---
+
+
 # FXの時間足データを取ってくる
 意外とめんどくさいので自分用のテンプレートを記載。
 
