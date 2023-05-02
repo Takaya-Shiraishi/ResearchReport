@@ -80,10 +80,10 @@ date: 2023-05-03T02:34:49+09:00
   陽線・陰線が切り替わったタイミングで利益確定する。
 
 ## でもテンプレート通りだと50%ちょっとしか勝てなかったので
-![](img/2023-05-03-05-05-31.png)
+![](https://Takaya-Shiraishi.github.io/ResearchReport/img/2023-05-03-05-05-31.png)
 こうしました。
 すると、
-![](img/2023-05-03-05-06-02.png)
+![](https://Takaya-Shiraishi.github.io/ResearchReport/img/2023-05-03-05-06-02.png)
 こうなりました。
 
 ### ソースコード
