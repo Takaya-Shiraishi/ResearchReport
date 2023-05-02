@@ -58,3 +58,140 @@ date: 2023-05-03T02:34:49+09:00
    エントリーを行わない。
 3. エントリー後平均足の陰線/陽線で切り替わるタイミングで利益を確定する。
 
+---
+
+# テンプレート？
+一応平均足を中心としたテンプレート的なものがあったので。
+## MTF分析
+|エントリー足|中期足|長期足|
+|:-:|:-:|:-:|
+|１５分足|１時間足|日足|
+
+## 条件
+- 長期足・中期足
+  両足の平均足の陽線または陰線が合致している。
+- エントリー足
+  長期足・中期足の合致している方向にエントリー足の平均足が
+  変わったタイミングでエントリーする。
+  - 例
+    > 長期・中期足が陽線であれば、エントリー足の平均足が
+    > 陰線の常体から陽線へ切り替わった時。
+- 利益確定
+  陽線・陰線が切り替わったタイミングで利益確定する。
+
+## でもテンプレート通りだと50%ちょっとしか勝てなかったので
+![](img/2023-05-03-05-05-31.png)
+こうしました。
+すると、
+![](img/2023-05-03-05-06-02.png)
+こうなりました。
+
+### ソースコード
+```python
+import MetaTrader5 as mt5
+import pandas as pd
+import numpy as np
+from datetime import datetime, timezone
+
+# Initialize MT5 connection
+if not mt5.initialize():
+    print("initialize() failed, error code =", mt5.last_error())
+    quit()
+
+# Set the symbol and timeframes
+symbol = "GBPJPY"
+timeframes = [mt5.TIMEFRAME_M5, mt5.TIMEFRAME_H1, mt5.TIMEFRAME_H4, mt5.TIMEFRAME_D1]
+date_from = datetime(2022,1,1, tzinfo=timezone.utc)
+date_to = datetime(2023,4,30, tzinfo=timezone.utc)
+# Retrieve historical data for each timeframe
+data = {}
+for timeframe in timeframes:
+    rates = mt5.copy_rates_range(symbol, timeframe, date_from, date_to)
+    df = pd.DataFrame(rates)
+    df['time'] = pd.to_datetime(df['time'], unit='s')
+    data[timeframe] = df
+
+# Calculate Heikin-Ashi (平均足) for each timeframe
+def heikin_ashi(df):
+    ha_df = pd.DataFrame(index=df.index, columns=df.columns)
+    ha_df['time'] = df['time']
+    ha_df['open'] = (df['open'].shift(1) + df['close'].shift(1)) / 2
+    ha_df['close'] = (df['open'] + df['high'] + df['low'] + df['close']) / 4
+    ha_df['high'] = df['high']
+    ha_df['low'] = df['low']
+    return ha_df
+
+for timeframe in timeframes:
+    data[timeframe] = heikin_ashi(data[timeframe])
+
+# Check if all timeframes are bullish or bearish
+def check_alignment(ha_data, timeframes):
+    alignment = None
+    for timeframe in timeframes[:-1]:
+        current_candle = ha_data[timeframe].iloc[-1]
+        if current_candle['open'] < current_candle['close']:
+            if alignment is None:
+                alignment = "bullish"
+            elif alignment != "bullish":
+                return None
+        else:
+            if alignment is None:
+                alignment = "bearish"
+            elif alignment != "bearish":
+                return None
+    return alignment
+
+initial_balance = 100000
+    
+def backtest(data, timeframes):
+    balance = initial_balance
+    position = None
+    entry_price = None
+    win_count = 0
+    loss_count = 0
+
+    entry_data = data[timeframes[0]]
+    for index, row in entry_data.iterrows():
+        alignment = check_alignment(data, timeframes)
+        if alignment is None:
+            position = None
+            continue
+
+        # Check for entry signal
+        if position is None and (row['open'] < row['close']) == (alignment == "bullish"):
+            position = "long" if alignment == "bullish" else "short"
+            entry_price = row['close']
+            #print(f"{row['time']} - Entered {position} at {entry_price}")
+
+        # Check for exit signal
+        if position is not None and (row['open'] < row['close']) != (alignment == "bullish"):
+            exit_price = row['close']
+            if position == "long":
+                profit = exit_price - entry_price
+            else:
+                profit = entry_price - exit_price
+            balance += profit * 100000  # Assuming a trade volume of 100,000 units
+
+            # Update win/loss counts
+            if profit > 0:
+                win_count += 1
+            else:
+                loss_count += 1
+
+            #print(f"{row['time']} - Exited {position} at {exit_price}, profit: {profit:.5f}, balance: {balance:.2f}")
+            position = None
+
+    # Calculate win rate
+    win_rate = win_count / (win_count + loss_count) * 100
+
+    return balance, win_rate
+
+# Run the backtest
+final_balance, win_rate = backtest(data, timeframes)
+print(f"Initial balance: {initial_balance:.2f}")
+print(f"Final balance: {final_balance:.2f}")
+print(f"Win rate: {win_rate:.2f}%")
+
+# Shutdown MT5 connection
+mt5.shutdown()
+```
