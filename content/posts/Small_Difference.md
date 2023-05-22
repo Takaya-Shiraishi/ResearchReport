@@ -58,7 +58,7 @@ import MetaTrader5 as mt5
 import pandas as pd
 
 # MT5に接続
-if not mt5.initialize(login=27035334, server="XMTrading-MT5", password="Taka8sotsuken"):
+if not mt5.initialize(login=数字, server="XMTrading-MT5", password="パスワード"):
     print("initialize() failed, error code =",mt5.last_error())
     mt5.shutdown()
 
