@@ -137,42 +137,46 @@ None of the papers collected address the research question of whether "Heikin-As
   - 検索詳細（白石の研究と関連性の高いもののみ抜粋）
     - [SMOOTHED HEIKIN-ASHI ALGORITHMS OPTIMIZED FOR
 AUTOMATED TRADING SYSTEMS](https://www.itema-conference.com/wp-content/uploads/2019/09/pauna_smoothed_heikin-ashi_algorithms_optimized_for_automated_trading_systems_pp_514-525.pdf)
-      翻訳結果:
+      - 翻訳結果:
         - タイトル
         ```
         自動取引システムに最適化された平滑化平均足アルゴリズム
         ```
         - 概要翻訳
-        ```plain
+        ```
         このPDFファイルは、自動取引システムに最適化されたスムーズな平均足アルゴリズムについての情報を提供しています。平均足（Heikin-Ashi）とは、金融市場でトレンドを特定し追跡するための手法の一つであり、ノイズを除去し価格のトレンドをグラフィカルに表現するための新しい系列に価格の時系列を変換します。この手法は、高頻度取引においてトレンドを特定し追跡するための優れた方法として知られています。本論文では、平均足の手法を現代の制限条件と組み合わせることで、取引効率を向上させ、取引の自動化を実現する方法を紹介します。平均足に基づく取引シグナルの自動生成と使用方法、および同じ手法を使用して出口シグナルを自動化する方法も説明されます。また、最後の部分では、提案された手法を他の高頻度取引の戦略と比較するために、取引結果も提示されます。具体的には、フランクフルト証券取引所のDeutscher Aktienindex市場で得られた取引結果が示されます。
         ``` 
         - 本文抜粋（結果部分）
-        ```plain
+        ```
         All trading and the exit conditions included in the presented methodology are based on the Heikin-Ashi price transformation and can constitute a stand-alone trading model for automated trading systems. Being exclusively a mathematical model, the methodology presented in this paper can be applied with good results for algorithmic trading and high-frequency trading. This model can also be used for manual trading.
         ```
       
     - [Using The Heikin-Ashi Technique](https://d1wqtxts1xzle7.cloudfront.net/36795921/Using_The_Heikin_Ashi_Technique_D_Valcu-libre.pdf?1425059227=&response-content-disposition=inline%3B+filename%3DUsing_The_Heikin_Ashi_Technique_D_Valcu.pdf&Expires=1687119611&Signature=fRbfrHVIV8LPGWiXATWSK~TNPjRHmlf72IO4xQsMIrm7wFkN-RrEKD5su2dIQFQ~gTwXjrA3oK5b1ymHQhZrdsKupfNqKYaF-5YxItOFVesg8Ug0l2mFkwkuUNsaEv4Hr4xOpNExZ5OBJYenMN5kzi1ALsk8H4NFVsg10icZsDo7bX3DItdYN~9eQTgeWlMkSeoMlylvJOOm3JFFxB-yvQNTHpCvXszaJ2MsFBQmRpxsQX52R890pWCdlY8KMkLHHM-QdWCZoKLhVxNL3wqifUerzAhQ9N1Fli13UQcBnrgYVX1BVZeKU~6Grr4Io69~aeYurSOPXfjW0hb8d~e~8Q__&Key-Pair-Id=APKAJLOHF5GGSLRBV4ZA)
-       翻訳結果：
+        - 翻訳結果：
          - タイトル
-         ```平均足テクニックの使用```
+         ```
+         平均足テクニックの使用
+         ```
          - 概要翻訳
-         ```plain
+         ```
          このPDFファイルは、Heikin Ashiテクニックを使用したトレードテクニックについて説明しています。Heikin Ashi法は、通常のチャートから不規則性を除去した視覚的な表現を提供し、市場のトレンドや統合をより良く理解することができます。この技術を使用することで、ローソク足チャートを簡単に解釈し、情報に基づいたトレードの決定を行うことができます。Heikin Ashiテクニックの利点や、他のテクニカル指標との組み合わせ方、リスク管理の重要性についても説明されています。ただし、具体的な実装手順については提供されていません。
          ```
          - 本文抜粋（結果部分）
-         ```plain
+         ```
          The main advantage of this simple method is a better visual perspective of the current status and strength of the trend or consolidation, and a possible anticipation of the next bar's strength. As with any other charting method, the heikin-ashi is not 100% reliable and therefore should be combined with other technical indicators. Your trading, of course, should also include risk- and capital-control strategies.
          ```
     - [Heikin-Ashi Technique with Use of Oriented Fuzzy Numbers](https://link.springer.com/chapter/10.1007/978-3-030-95929-6_5)
-       翻訳結果：
+        - 翻訳結果：
          - タイトル
-         ```指向性ファジィ数を用いた平均足手法``` 
+         ```
+         指向性ファジィ数を用いた平均足手法
+         ``` 
          - 概要翻訳
-         ```plain
-        ローソク足とは、為替相場の変動を表すチャートの一種である。ローソク足の代表的なものは、ローソク足に基づく和製ローソク足であり、相場の変動を表現しています。また、金融市場の価格時系列を利用してトレンドを把握する手法の一つとして、平均足の手法が知られています。手法としては、通常のローソク足が変形したものである。また、ローソク足は、過去と現在の相場変動を表現しています。この点は、平均足チャートと比較した場合の大きな利点である。一方、平均足は指向性ファジィ数で記述することができる。本論文の主な目的は、指向性ファジィ数で記述された平均足チャートの変換として、任意の平均足を提示することである。さらに、平均足チャートの不正確さに対する平均足の影響を研究する。すべての考察は、数値的なケーススタディによって説明される。 
+         ```
+          ローソク足とは、為替相場の変動を表すチャートの一種である。ローソク足の代表的なものは、ローソク足に基づく和製ローソク足であり、相場の変動を表現しています。また、金融市場の価格時系列を利用してトレンドを把握する手法の一つとして、平均足の手法が知られています。手法としては、通常のローソク足が変形したものである。また、ローソク足は、過去と現在の相場変動を表現しています。この点は、平均足チャートと比較した場合の大きな利点である。一方、平均足は指向性ファジィ数で記述することができる。本論文の主な目的は、指向性ファジィ数で記述された平均足チャートの変換として、任意の平均足を提示することである。さらに、平均足チャートの不正確さに対する平均足の影響を研究する。すべての考察は、数値的なケーススタディによって説明される。 
          ```
          - 本文抜粋（結果部分）
-         ```plain
+         ```
          本文は有償閲覧限定のため無し
          ```
 - J-STAGE
