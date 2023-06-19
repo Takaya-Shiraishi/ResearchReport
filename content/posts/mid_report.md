@@ -148,13 +148,13 @@ AUTOMATED TRADING SYSTEMS](https://www.itema-conference.com/wp-content/uploads/2
         - 本文抜粋（結果部分）
         > All trading and the exit conditions included in the presented methodology are based on the Heikin-Ashi price transformation and can constitute a stand-alone trading model for automated trading systems. Being exclusively a mathematical model, the methodology presented in this paper can be applied with good results for algorithmic trading and high-frequency trading. This model can also be used for manual trading.
       
-    - [Using The Heikin-Ashi Technique](https://d1wqtxts1xzle7.cloudfront.net/36795921/Using_The_Heikin_Ashi_Technique_D_Valcu-libre.pdf?1425059227=&response-content-disposition=inline%3B+filename%3DUsing_The_Heikin_Ashi_Technique_D_Valcu.pdf&Expires=1687119611&Signature=fRbfrHVIV8LPGWiXATWSK~TNPjRHmlf72IO4xQsMIrm7wFkN-RrEKD5su2dIQFQ~gTwXjrA3oK5b1ymHQhZrdsKupfNqKYaF-5YxItOFVesg8Ug0l2mFkwkuUNsaEv4Hr4xOpNExZ5OBJYenMN5kzi1ALsk8H4NFVsg10icZsDo7bX3DItdYN~9eQTgeWlMkSeoMlylvJOOm3JFFxB-yvQNTHpCvXszaJ2MsFBQmRpxsQX52R890pWCdlY8KMkLHHM-QdWCZoKLhVxNL3wqifUerzAhQ9N1Fli13UQcBnrgYVX1BVZeKU~6Grr4Io69~aeYurSOPXfjW0hb8d~e~8Q__&Key-Pair-Id=APKAJLOHF5GGSLRBV4ZA)
+    - [Using The Heikin-Ashi Technique](https://www.academia.edu/download/36795921/Using_The_Heikin_Ashi_Technique_D_Valcu.pdf)
       - 翻訳結果：
          - タイトル
          > 平均足テクニックの使用
 
          - 概要翻訳
-         > このPDFファイルは、Heikin Ashiテクニックを使用したトレードテクニックについて説明しています。Heikin Ashi法は、通常のチャートから不規則性を除去した視覚的な表現を提供し、市場のトレンドや統合をより良く理解することができます。この技術を使用することで、ローソク足チャートを簡単に解釈し、情報に基づいたトレードの決定を行うことができます。Heikin Ashiテクニックの利点や、他のテクニカル指標との組み合わせ方、リスク管理の重要性についても説明されています。ただし、具体的な実装手順については提供されていません。
+         > このPDFファイルは、Heikin Ashiテクニックを使用したトレードテクニックについて説明しています。Heikin Ashi法は、通常のチャートから不規則性を除去した視覚的な表現を提供し、市場のトレンドや統合をより良く理解することができます。この技術を使用することで、ローソク足チャートを簡単に解釈し、情報に基づいたトレードの決定を行うことができます。Heikin Ashiテクニックの利点や、リスク管理の重要性についても説明されています。ただし、具体的な実装手順については提供されていません。
 
          - 本文抜粋（結果部分）
          > The main advantage of this simple method is a better visual perspective of the current status and strength of the trend or consolidation, and a possible anticipation of the next bar's strength. As with any other charting method, the heikin-ashi is not 100% reliable and therefore should be combined with other technical indicators. Your trading, of course, should also include risk- and capital-control strategies.
