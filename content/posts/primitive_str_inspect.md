@@ -1,8 +1,10 @@
 ---
-title: "Primitive_str_inspect"
-date: 2023-07-03T10:03:15+09:00
-draft: true
+title: "Primitive Str Inspect"
+date: 2023-07-03T10:48:07+09:00
+# bookComments: false
+# bookSearchExclude: false
 ---
+
 
 # 勝率80%のトレード手法の再検証
 実は過去にバックテストの結果として勝率80%前後がコンスタントに出るアルゴリズムを見つけていた。
